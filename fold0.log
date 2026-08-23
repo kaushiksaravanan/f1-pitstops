@@ -1,0 +1,3 @@
+[fold 0] training start, n_train=351312 n_val=87828
+[0]	val-auc:0.92128
+[300]	val-auc:0.94647

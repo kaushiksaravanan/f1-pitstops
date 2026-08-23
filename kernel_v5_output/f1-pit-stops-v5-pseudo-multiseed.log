@@ -1,0 +1,48 @@
+[{"stream_name":"stdout","time":4.957291746,"data":"INP=/kaggle/input/competitions/playground-series-s6e5\n"}
+,{"stream_name":"stdout","time":6.6297957180000004,"data":"train=(439140, 16)  test=(188165, 15)\n"}
+,{"stream_name":"stdout","time":6.629835548,"data":"=== building features ===\n"}
+,{"stream_name":"stdout","time":11.408590892,"data":"  features: 93\n"}
+,{"stream_name":"stdout","time":16.366968837,"data":"\n"}
+,{"stream_name":"stdout","time":16.367001957,"data":"=== PHASE 1: Teacher LGB for pseudo-labels ===\n"}
+,{"stream_name":"stdout","time":979.445914052,"data":"  teacher test mean=0.1934  min=0.0000  max=0.9979\n"}
+,{"stream_name":"stdout","time":979.446576802,"data":"  pseudo-labels: 8452 pos + 126127 neg = 134579 (71.5% of test)\n"}
+,{"stream_name":"stdout","time":979.506706159,"data":"  augmented train: 573719 rows (439140 real + 134579 pseudo)\n"}
+,{"stream_name":"stdout","time":979.506749549,"data":"\n"}
+,{"stream_name":"stdout","time":979.506755869,"data":"=== PHASE 2: Multi-seed LGB (3 seeds) ===\n"}
+,{"stream_name":"stdout","time":1604.138167843,"data":"  LGB seed=42 OOF AUC = 0.948659\n"}
+,{"stream_name":"stdout","time":2192.024305264,"data":"  LGB seed=2026 OOF AUC = 0.948763\n"}
+,{"stream_name":"stdout","time":2861.529743499,"data":"  LGB seed=777 OOF AUC = 0.948777\n"}
+,{"stream_name":"stdout","time":2861.529922269,"data":"\n"}
+,{"stream_name":"stdout","time":2861.529972039,"data":"=== PHASE 3: Multi-seed XGB (3 seeds) ===\n"}
+,{"stream_name":"stdout","time":3574.980641165,"data":"  XGB seed=2026 OOF AUC = 0.948419\n"}
+,{"stream_name":"stdout","time":4310.217736579,"data":"  XGB seed=1337 OOF AUC = 0.948423\n"}
+,{"stream_name":"stdout","time":5020.829039898,"data":"  XGB seed=99 OOF AUC = 0.948510\n"}
+,{"stream_name":"stdout","time":5020.829257098,"data":"\n"}
+,{"stream_name":"stdout","time":5020.829269748,"data":"=== PHASE 4: DART (augmented) ===\n"}
+,{"stream_name":"stdout","time":11780.725767258,"data":"  DART OOF AUC = 0.948912\n"}
+,{"stream_name":"stdout","time":11780.725820668,"data":"\n"}
+,{"stream_name":"stdout","time":11780.725827508,"data":"=== PHASE 5: Optimized blend ===\n"}
+,{"stream_name":"stdout","time":11780.861249157,"data":"  lgb_s42: 0.948659\n"}
+,{"stream_name":"stdout","time":11780.990407086,"data":"  lgb_s2026: 0.948763\n"}
+,{"stream_name":"stdout","time":11781.124097085,"data":"  lgb_s777: 0.948777\n"}
+,{"stream_name":"stdout","time":11781.255980014,"data":"  xgb_s2026: 0.948419\n"}
+,{"stream_name":"stdout","time":11781.380917743,"data":"  xgb_s1337: 0.948423\n"}
+,{"stream_name":"stdout","time":11781.507962943,"data":"  xgb_s99: 0.948510\n"}
+,{"stream_name":"stdout","time":11781.633613982,"data":"  dart: 0.948912\n"}
+,{"stream_name":"stdout","time":11781.77727997,"data":"\n"}
+,{"stream_name":"stdout","time":11781.77731843,"data":"simple avg OOF AUC = 0.949352\n"}
+,{"stream_name":"stdout","time":11863.797978338,"data":"weighted blend weights: {'lgb_s42': np.float64(0.0973), 'lgb_s2026': np.float64(0.1501), 'lgb_s777': np.float64(0.152), 'xgb_s2026': np.float64(0.057), 'xgb_s1337': np.float64(0.0754), 'xgb_s99': np.float64(0.1094), 'dart': np.float64(0.3588)}\n"}
+,{"stream_name":"stdout","time":11863.955181535,"data":"weighted blend OOF AUC = 0.949433\n"}
+,{"stream_name":"stdout","time":11943.034566155,"data":"weighted-rank OOF AUC = 0.949399\n"}
+,{"stream_name":"stdout","time":11943.413738463,"data":"\n"}
+,{"stream_name":"stdout","time":11943.413778283,"data":"\u003e\u003e\u003e BEST = weighted_mean  OOF AUC = 0.949433\n"}
+,{"stream_name":"stdout","time":11944.603772133,"data":"\n"}
+,{"stream_name":"stdout","time":11944.603818083,"data":"Total runtime: 199.0 min\n"}
+,{"stream_name":"stdout","time":11944.603847733,"data":"Done.\n"}
+,{"stream_name":"stderr","time":11947.37432934,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":11947.37451741,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":11947.678651304,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":11947.678676234,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":11948.430449721,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":11949.950698363,"data":"[NbConvertApp] Writing 379989 bytes to __results__.html\n"}
+]

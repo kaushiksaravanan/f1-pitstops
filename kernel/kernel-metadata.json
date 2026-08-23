@@ -1,0 +1,14 @@
+{
+  "id": "kaushiksarav/f1-pit-stops-blended-gbm-ensemble",
+  "title": "F1 Pit Stops Blended GBM Ensemble",
+  "code_file": "main.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": ["aadigupta1601/f1-strategy-dataset-pit-stop-prediction"],
+  "competition_sources": ["playground-series-s6e5"],
+  "kernel_sources": []
+}

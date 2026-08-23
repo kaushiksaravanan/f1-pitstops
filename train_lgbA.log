@@ -1,0 +1,8 @@
+[load] reading parquet ...
+[load] train=(439140, 88)  test=(188165, 87)  folds=(439140,)
+[fe] adding extra features ...
+[fe] using 93 features
+[fe] X=(439140, 93)  X_test=(188165, 93)  positive rate=0.1990
+
+[fold 0] train=351312 val=87828
+[200]	val's auc: 0.947518

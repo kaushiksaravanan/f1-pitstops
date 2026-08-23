@@ -1,0 +1,13 @@
+[load] data
+[external] joining
+  feat cols=88, X=(439140, 88), X_test=(188165, 88)
+[fold 0] start at 25s
+[0]	val-auc:0.92128
+[300]	val-auc:0.94647
+[600]	val-auc:0.94827
+[900]	val-auc:0.94886
+[1200]	val-auc:0.94905
+[1375]	val-auc:0.94906
+  fold 0: AUC=0.949096 best_iter=1295 elapsed=808s
+[fold 1] start at 832s
+[0]	val-auc:0.92082

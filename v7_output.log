@@ -1,0 +1,64 @@
+train=(439140, 16) test=(188165, 15) orig=(101371, 16)
+orig cols: ['Driver', 'LapNumber', 'Compound', 'Stint', 'TyreLife', 'Position', 'LapTime (s)', 'Race', 'Year', 'LapTime_Delta', 'Cumulative_Degradation', 'PitStop', 'PitNextLap', 'RaceProgress', 'Normalized_TyreLife', 'Position_Change']
+common cols: ['Driver', 'Compound', 'Race', 'Year', 'PitStop', 'LapNumber', 'Stint', 'TyreLife', 'Position', 'LapTime (s)', 'LapTime_Delta', 'Cumulative_Degradation', 'RaceProgress', 'Position_Change', 'PitNextLap']
+Combined: (540511, 17)
+=== building features ===
+train_df=(540511, 80) test_df=(188165, 79)
+features: 74
+synth=(439140, 74) orig=(101371, 74)
+
+=== TRAINING ON GPU (16 threads) ===
+
+[LGB1] LGB-GPU 5-fold...
+  fold 0: best_iter=1342
+  fold 1: best_iter=1194
+  fold 2: best_iter=1357
+  fold 3: best_iter=1378
+  fold 4: best_iter=1285
+[LGB1] OOF AUC = 0.949074
+
+[LGB2] LGB-GPU 5-fold...
+  fold 0: best_iter=818
+  fold 1: best_iter=713
+  fold 2: best_iter=739
+  fold 3: best_iter=638
+  fold 4: best_iter=1047
+[LGB2] OOF AUC = 0.949244
+
+[XGB1] XGB-GPU 5-fold...
+  fold 0: best_iter=1574
+  fold 1: best_iter=1463
+  fold 2: best_iter=1448
+  fold 3: best_iter=1691
+  fold 4: best_iter=1707
+[XGB1] OOF AUC = 0.948850
+
+[XGB2] XGB-GPU 5-fold...
+  fold 0: best_iter=1609
+  fold 1: best_iter=1337
+  fold 2: best_iter=1090
+  fold 3: best_iter=1225
+  fold 4: best_iter=1255
+[XGB2] OOF AUC = 0.949134
+
+[DART] LGB-CPU 5-fold...
+  fold 0 done
+  fold 1 done
+  fold 2 done
+  fold 3 done
+  fold 4 done
+[DART] OOF AUC = 0.949544
+
+=== BLEND ===
+  lgb1: 0.949074
+  lgb2: 0.949244
+  xgb1: 0.948850
+  xgb2: 0.949134
+  dart: 0.949544
+weights: {'lgb1': 0.0878, 'lgb2': 0.2196, 'xgb1': 0.0783, 'xgb2': 0.1691, 'dart': 0.4451}
+
+>>> BLEND OOF AUC = 0.949979
+simple avg OOF AUC = 0.949878
+
+Runtime: 35.7 min
+DONE - submission_v7.csv written

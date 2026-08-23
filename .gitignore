@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+.ipynb_checkpoints/
+catboost_info/
+*.csv
+*.parquet
+*.pkl
+*.feather
+kernel_output*/
+external/
+.DS_Store

@@ -1,0 +1,28 @@
+[{"stream_name":"stdout","time":4.799298918,"data":"=== probing /kaggle/input ===\n"}
+,{"stream_name":"stdout","time":4.839426153,"data":"comp INP=/kaggle/input/competitions/playground-series-s6e5\n"}
+,{"stream_name":"stdout","time":4.84402063,"data":"external candidates: ['/kaggle/input/datasets/aadigupta1601/f1-strategy-dataset-pit-stop-prediction/f1_strategy_dataset_v4.csv']\n"}
+,{"stream_name":"stdout","time":6.561010808,"data":"train=(439140, 16)  test=(188165, 15)\n"}
+,{"stream_name":"stdout","time":6.828909245,"data":"loaded external: /kaggle/input/datasets/aadigupta1601/f1-strategy-dataset-pit-stop-prediction/f1_strategy_dataset_v4.csv  shape=(101371, 16)\n"}
+,{"stream_name":"stdout","time":6.828961417,"data":"cols: ['Driver', 'LapNumber', 'Compound', 'Stint', 'TyreLife', 'Position', 'LapTime (s)', 'Race', 'Year', 'LapTime_Delta', 'Cumulative_Degradation', 'PitStop', 'PitNextLap', 'RaceProgress', 'Normalized_TyreLife', 'Position_Change']\n"}
+,{"stream_name":"stdout","time":6.829009107,"data":"=== building features ===\n"}
+,{"stream_name":"stdout","time":6.944620797,"data":"join keys: ['Driver', 'Race', 'Year', 'LapNumber', 'TyreLife', 'Compound']  ext cols to bring: ['Normalized_TyreLife', 'Stint']\n"}
+,{"stream_name":"stdout","time":7.489800146,"data":"  ext_Normalized_TyreLife: coverage = 0.597%\n"}
+,{"stream_name":"stdout","time":7.491279655,"data":"  ext_Stint: coverage = 0.597%\n"}
+,{"stream_name":"stdout","time":15.177138364,"data":"  train_df=(439140, 90)  test_df=(188165, 89)\n"}
+,{"stream_name":"stdout","time":15.179235007,"data":"  features: 85\n"}
+,{"stream_name":"stdout","time":20.366923026,"data":"\n"}
+,{"stream_name":"stdout","time":20.366967518,"data":"[LGB-v4] LGB 5-fold...\n"}
+,{"stream_name":"stdout","time":418.034482449,"data":"[LGB-v4] OOF AUC = 0.948352\n"}
+,{"stream_name":"stdout","time":418.356320977,"data":"\n"}
+,{"stream_name":"stdout","time":418.356388524,"data":"[XGB-v4] XGB 5-fold...\n"}
+,{"stream_name":"stdout","time":878.806410911,"data":"[XGB-v4] OOF AUC = 0.947947\n"}
+,{"stream_name":"stdout","time":879.008580433,"data":"\n"}
+,{"stream_name":"stdout","time":879.008629225,"data":"[v4 blend] OOF AUC = 0.948708\n"}
+,{"stream_name":"stdout","time":879.543585311,"data":"wrote submission.csv  total runtime = 14.6 min\n"}
+,{"stream_name":"stderr","time":882.706210594,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":882.706325342,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":883.007291404,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":883.007325864,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":883.865365068,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":885.540009612,"data":"[NbConvertApp] Writing 355940 bytes to __results__.html\n"}
+]

@@ -1,0 +1,41 @@
+[{"stream_name":"stdout","time":3.481130647,"data":"INP=/kaggle/input/competitions/playground-series-s6e5\n"}
+,{"stream_name":"stdout","time":4.827107921,"data":"train=(439140, 16)  test=(188165, 15)\n"}
+,{"stream_name":"stdout","time":5.94389127,"data":"=== building lookups ===\n"}
+,{"stream_name":"stdout","time":6.332575318,"data":"=== building sequences ===\n"}
+,{"stream_name":"stdout","time":32.845431575,"data":"  total sequences: 42233\n"}
+,{"stream_name":"stdout","time":32.867405157,"data":"  seq lengths: min=1 max=51\n"}
+,{"stream_name":"stdout","time":37.781571255,"data":"device=cuda\n"}
+,{"stream_name":"stdout","time":37.781603453,"data":"\n"}
+,{"stream_name":"stdout","time":37.781609262,"data":"=== BiLSTM (GPU) ===\n"}
+,{"stream_name":"stdout","time":37.781614366,"data":"  fold 0...\n"}
+,{"stream_name":"stderr","time":38.088481359,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":38.088515093,"data":"  File \"/kaggle/src/script.py\", line 261, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":38.088922376,"data":"    lstm_oof, lstm_test = train_model(BiLSTM, dict(input_dim=N_FEAT, hidden=96, layers=2, dropout=0.3),\n"}
+,{"stream_name":"stderr","time":38.089079057,"data":"                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":38.089117281,"data":"  File \"/kaggle/src/script.py\", line 191, in train_model\n"}
+,{"stream_name":"stderr","time":38.089320727,"data":"    model = model_cls(**kwargs).to(device)\n"}
+,{"stream_name":"stderr","time":38.089428167,"data":"            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":38.089469096,"data":"  File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 1381, in to\n"}
+,{"stream_name":"stderr","time":38.091206403,"data":"    return self._apply(convert)\n"}
+,{"stream_name":"stderr","time":38.091262073,"data":"           ^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":38.091335891,"data":"  File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/module.py\", line 933, in _apply\n"}
+,{"stream_name":"stderr","time":38.091659671,"data":"    module._apply(fn)\n"}
+,{"stream_name":"stderr","time":38.091671265,"data":"  File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/rnn.py\", line 292, in _apply\n"}
+,{"stream_name":"stderr","time":38.091895207,"data":"    self._init_flat_weights()\n"}
+,{"stream_name":"stderr","time":38.091921822,"data":"  File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/rnn.py\", line 216, in _init_flat_weights\n"}
+,{"stream_name":"stderr","time":38.092135728,"data":"    self.flatten_parameters()\n"}
+,{"stream_name":"stderr","time":38.092143842,"data":"  File \"/usr/local/lib/python3.12/dist-packages/torch/nn/modules/rnn.py\", line 273, in flatten_parameters\n"}
+,{"stream_name":"stderr","time":38.092340685,"data":"    torch._cudnn_rnn_flatten_weight(\n"}
+,{"stream_name":"stderr","time":38.092350037,"data":"torch.AcceleratorError: CUDA error: no kernel image is available for execution on the device\n"}
+,{"stream_name":"stderr","time":38.092356128,"data":"Search for `cudaErrorNoKernelImageForDevice' in https://docs.nvidia.com/cuda/cuda-runtime-api/group__CUDART__TYPES.html for more information.\n"}
+,{"stream_name":"stderr","time":38.092361073,"data":"CUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\n"}
+,{"stream_name":"stderr","time":38.092366558,"data":"For debugging consider passing CUDA_LAUNCH_BLOCKING=1\n"}
+,{"stream_name":"stderr","time":38.092371665,"data":"Compile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n"}
+,{"stream_name":"stderr","time":38.092394982,"data":"\n"}
+,{"stream_name":"stderr","time":41.992309144000004,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":41.992338011,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":42.239866511,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":42.239895758,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":42.921826988,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":44.159527804,"data":"[NbConvertApp] Writing 360120 bytes to __results__.html\n"}
+]

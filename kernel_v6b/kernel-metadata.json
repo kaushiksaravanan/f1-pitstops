@@ -1,0 +1,14 @@
+{
+  "id": "kaushiksarav/f1-pit-stops-v6b-lstm-gpu",
+  "title": "F1 Pit Stops v6b LSTM GPU",
+  "code_file": "main.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": ["playground-series-s6e5"],
+  "kernel_sources": ["kaushiksarav/f1-pit-stops-blended-gbm-ensemble"]
+}

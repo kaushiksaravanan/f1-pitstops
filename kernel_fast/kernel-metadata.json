@@ -1,0 +1,14 @@
+{
+  "id": "kaushiksarav/f1-pit-stops-fast-backup",
+  "title": "F1 Pit Stops Fast Backup",
+  "code_file": "main.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [],
+  "competition_sources": ["playground-series-s6e5"],
+  "kernel_sources": []
+}
